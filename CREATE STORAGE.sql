@@ -71,6 +71,7 @@ CREATE TABLE IF NOT EXISTS `shopstore`.`ShipmentDim` (
   `ShipmentKey` INT NOT NULL AUTO_INCREMENT,
   `ShipmentTypeID` INT NULL,
   `Name` VARCHAR(45) NULL,
+  `Description` VARCHAR(255) NULL,
   PRIMARY KEY (`ShipmentKey`))
 ENGINE = InnoDB;
 

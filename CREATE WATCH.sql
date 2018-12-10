@@ -30,7 +30,8 @@ CREATE TABLE IF NOT EXISTS `shopwindow`.`DailySales` (
   `TotalPrice` DOUBLE NOT NULL,
   `OrderDay` INT NOT NULL,
   `OrderMonth` INT NOT NULL,
-  `OrderYear` INT NOT NULL)
+  `OrderYear` INT NOT NULL,
+  PRIMARY KEY (`ProductID`, `OrderDay`, `OrderMonth`, `OrderYear`))
 ENGINE = InnoDB;
 
 

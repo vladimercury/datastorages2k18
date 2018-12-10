@@ -12,8 +12,8 @@ select * from
 /*where ProductID not in (select ProductID from backupdb.Product)*/
 on duplicate key update Price = t.ProductPrice;
 
-insert into backupdb.ShipmentType (ShipmentTypeID, Name)
-select ShipmentTypeID, Name from shopstore.ShipmentDim shd
+insert into backupdb.ShipmentType (ShipmentTypeID, Name, Description)
+select ShipmentTypeID, Name, Description from shopstore.ShipmentDim shd
 /*where ShipmentTypeID not in (select ShipmentTypeID from backupdb.ShipmentType)*/
 on duplicate key update ShipmentTypeID = shd.ShipmentTypeID;
 
