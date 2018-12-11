@@ -4,5 +4,5 @@ insert into shopwindow.DailySales (ProductID, ProductName, ProductMeasure, Total
 			on op.ProductID = p.ProductID
 		inner join shopdb.Orders o
 			on op.OrderID = o.OrderID
-		group by p.ProductID, p.Name, p.Measure, o.CreationDate
+		group by p.ProductID, p.Name, p.Measure, DATE(o.CreationDate)
 	on duplicate key update TotalQuantity = VALUES(TotalQuantity), TotalPrice = VALUES(TotalPrice);
